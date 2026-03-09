@@ -1,12 +1,7 @@
-import { DynamoDBClient } from "@aws-sdk/client-dynamodb";
-import { PutCommand, DynamoDBDocumentClient } from "@aws-sdk/lib-dynamodb";
+import { PutCommand } from "@aws-sdk/lib-dynamodb";
 import type { APIGatewayEvent, APIGatewayProxyResult } from "aws-lambda";
 import type { TodoItem } from "./todoTypes.ts";
-
-// Declaring these outside of the function scope makes them static
-// Significantly reduce overhead from when I had them inside of the function
-const client = new DynamoDBClient({});
-const docClient = DynamoDBDocumentClient.from(client);
+import { docClient } from "./dynamoClient.ts";
 
 export const createTask = async (
   event: APIGatewayEvent,

@@ -1,9 +1,7 @@
-import { DynamoDBClient, QueryCommand } from "@aws-sdk/client-dynamodb";
-import { DynamoDBDocumentClient, ScanCommand } from "@aws-sdk/lib-dynamodb";
-import type { APIGatewayEvent, APIGatewayProxyResult } from "aws-lambda";
+import { ScanCommand } from "@aws-sdk/lib-dynamodb";
+import type { APIGatewayProxyResult } from "aws-lambda";
 
-const client = new DynamoDBClient();
-const docClient = DynamoDBDocumentClient.from(client);
+import { docClient } from "./dynamoClient.ts";
 
 export const getAllTasks = async (): Promise<APIGatewayProxyResult> => {
   try {
