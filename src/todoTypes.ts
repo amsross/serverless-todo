@@ -4,5 +4,5 @@ export type TodoItem = {
   id: number;
   status: TodoStatus;
   title: string;
-  description: string;
+  description?: string;
 };
