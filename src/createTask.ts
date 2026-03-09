@@ -47,6 +47,7 @@ export const createTask = async (
       body: JSON.stringify(`${todoItem.title} has been successfully added.`),
     };
   } catch (error) {
+    console.log(error);
     return {
       statusCode: 500,
       body: JSON.stringify({ message: `Internal Server Error: ${error}` }),
