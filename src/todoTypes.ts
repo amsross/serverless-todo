@@ -6,3 +6,7 @@ export type TodoItem = {
   title: string;
   description?: string;
 };
+
+export function isValidTodoStatus(value: any): value is TodoStatus {
+  return ["PENDING", "DOING", "DONE"].includes(value);
+}
