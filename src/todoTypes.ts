@@ -21,3 +21,8 @@ export const TodoItemCreateSchema = TodoItemSchema.omit({
 });
 
 export type TodoItemCreate = z.infer<typeof TodoItemCreateSchema>;
+
+export type TodoStatus = (typeof TodoStatus)[keyof typeof TodoStatus];
+
+export const isValidTodoStatus = (value: unknown): value is TodoStatus =>
+  typeof value === 'string' && value in TodoStatus;

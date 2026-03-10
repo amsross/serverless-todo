@@ -1,6 +1,6 @@
 import type { APIGatewayProxyResult } from 'aws-lambda';
 import { type TodoItemCreate, TodoItemCreateSchema } from './todoTypes.ts';
-import { createTodo } from './dynamoClient.ts';
+import { createTodo } from './todoWriteRepository.ts';
 
 import { Logger } from '@aws-lambda-powertools/logger';
 
