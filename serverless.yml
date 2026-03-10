@@ -5,7 +5,7 @@ frameworkVersion: "3"
 
 provider:
   name: aws
-  runtime: nodejs18.x
+  runtime: nodejs22.x
 
   environment:
     DYNAMODB_TODO_TABLE: ${self:service}-todoList-${sls:stage}
