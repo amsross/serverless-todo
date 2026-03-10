@@ -1,6 +1,10 @@
 {
   "$SCHEMA": "https://www.schemastore.org/tsconfig",
   "type": "module",
+  "workspaces": [
+    "backend",
+    "frontend"
+  ],
   "dependencies": {
     "@aws-lambda-powertools/logger": "2.31.0",
     "@aws-lambda-powertools/parser": "2.31.0",
