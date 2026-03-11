@@ -21,6 +21,7 @@
     "@tsconfig/node22": "^22.0.5",
     "@types/aws-lambda": "^8.10.161",
     "@types/node": "25.4.0",
+    "serverless-finch": "^4.0.4",
     "serverless-offline": "^14.5.0"
   }
 }
