@@ -28,7 +28,7 @@ plugins:
 
 custom:
   client:
-    bucketName: serverless-todo-static-website
+    bucketName: camerontheross-todo
     distributionFolder: frontend/dist
 
 package:
