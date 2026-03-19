@@ -3,9 +3,10 @@ import { TaskCard } from "./TaskCard"
 
 import { fetchTaskByStatus, type Task } from "../services/taskService"
 import { useEffect, useState } from 'react'
+import type { TodoStatus } from "@shared/types"
 
 interface TaskListProps {
-  title: string
+  title: TodoStatus
 }
 
 const mapTaskItems = (tasks: Task[]) => {
