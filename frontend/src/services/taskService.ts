@@ -1,14 +1,10 @@
+import type { TodoItem, TodoStatus } from "@shared/types";
+
 const apiUrl: string = import.meta.env.VITE_TODO_API_URL;
 
-// Remove and import from shared/ once refactored
-export interface Task {
-  id: number;
-  title: string;
-  status: string;
-  description?: string;
-}
-
-export const fetchTaskByStatus = async (status: string): Promise<Task[]> => {
+export const fetchTaskByStatus = async (
+  status: TodoStatus,
+): Promise<TodoItem[]> => {
   const response = await fetch(`${apiUrl}/status/${status}`);
 
   if (!response.ok) {

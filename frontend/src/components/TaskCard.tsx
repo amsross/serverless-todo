@@ -1,8 +1,9 @@
 import { OverlayTrigger, Popover, Button, Card, Row, Col } from 'react-bootstrap';
+import type { TodoItem } from "@shared/types"
 
-interface TaskProps {
-  title: string;
-  desc?: string;
+
+interface TaskCardProps {
+  todoItem: TodoItem
 }
 
 
@@ -18,9 +19,7 @@ const descriptionPopover = (desc?: string) => (
 )
 
 
-export const TaskCard = ({ title, desc }: TaskProps) => {
-  console.log(desc)
-
+export const TaskCard = (props: TaskCardProps) => {
   return (
     <Card className="Task-Card">
       <Row>
@@ -31,8 +30,8 @@ export const TaskCard = ({ title, desc }: TaskProps) => {
 
         <Col>
 
-          <OverlayTrigger trigger="hover" overlay={descriptionPopover(desc || defaultTaskDescription)}>
-            <div className="Task-Name">{title}</div>
+          <OverlayTrigger trigger="hover" overlay={descriptionPopover(props.todoItem.description || defaultTaskDescription)}>
+            <div className="Task-Name">{props.todoItem.title}</div>
           </OverlayTrigger>
 
         </Col>

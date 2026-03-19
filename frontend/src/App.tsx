@@ -1,12 +1,11 @@
 import './App.css'
-//import { TaskCard } from "./components/TaskCard.tsx"
 import { TaskList } from './components/TaskList.tsx'
-
 import { Container, Stack } from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 
 export const App = () => {
+
   return (
     <div className="App">
 
@@ -16,9 +15,9 @@ export const App = () => {
       </header>
       <Container>
         <Stack direction='horizontal'>
-          <TaskList title="PENDING"></TaskList>
-          <TaskList title="DOING"></TaskList>
-          <TaskList title="DONE"></TaskList>
+          <TaskList status="PENDING"></TaskList>
+          <TaskList status="DOING"></TaskList>
+          <TaskList status="DONE"></TaskList>
         </Stack>
       </Container>
 
