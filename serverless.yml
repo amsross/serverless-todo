@@ -31,7 +31,7 @@ plugins:
 custom:
   client:
     bucketName: camerontheross-todo
-    distributionFolder: frontend/dist
+    distributionFolder: dist/frontend
 
 package:
   individually: true
