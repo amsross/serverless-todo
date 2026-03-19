@@ -1,0 +1,12 @@
+{
+  "extends": ["@tsconfig/node22/tsconfig.json","@tsconfig/node-ts/tsconfig.json"],
+  "compilerOptions": {
+    "lib": ["ES2015"],
+    "rootDir": ".",
+    "baseUrl": ".",
+    "moduleResolution":"bundler",
+    "paths": {
+      "@shared/*": ["./shared/*"]
+    }
+  }
+}

@@ -1,10 +1,7 @@
 {
-  "extends": ["@tsconfig/node22/tsconfig.json","@tsconfig/node-ts/tsconfig.json"],
+  "extends": "../tsconfig.base.json",
   "compilerOptions": {
-    "lib": ["ES2015"],
-    "rootDir": "./src",
-    "outDir": "../dist",
-    "paths": ["node_modules/*", "src/*"]
-  }
-
+    "outDir": "../dist/backend/"
+  },
+  "include": ["src/**/*"]
 }
