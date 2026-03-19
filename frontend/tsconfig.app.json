@@ -1,5 +1,13 @@
 {
   "compilerOptions": {
+
+    // hopefully fix issue with path aliases and vite...
+    "baseUrl": "../",
+    "paths": {
+      "@shared/*": ["./shared/*"]
+    },
+
+
     "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
     "target": "ES2022",
     "useDefineForClassFields": true,
