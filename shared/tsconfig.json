@@ -1,7 +1,7 @@
 {
   "extends": "../tsconfig.base.json",
   "compilerOptions": {
-    "outDir": "../dist/backend/"
-  },
-  "include": ["src/**/*"]
+    "outDir": "../dist/shared/"
+  }
+  // "include": ["**/*"]
 }
