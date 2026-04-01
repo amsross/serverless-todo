@@ -17,6 +17,12 @@ provider:
       statements:
         - Effect: "Allow"
           Action:
+            - "s3:GetObject"
+            - "s3:PutObject"
+            - "s3:ListBucket"
+          Resource: arn:aws:s3:::camerontheross-todo
+        - Effect: "Allow"
+          Action:
             - "dynamodb:PutItem"
             - "dynamodb:Get*"
             - "dynamodb:Scan*"
