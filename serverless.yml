@@ -1,7 +1,5 @@
-org: camerontheross
 app: serverless-todo
 service: serverless-todo
-frameworkVersion: "4"
 
 provider:
   name: aws
@@ -30,7 +28,7 @@ plugins:
 
 custom:
   client:
-    bucketName: camerontheross-todo
+    bucketName: serverless-todo
     distributionFolder: dist/frontend
 
 package:
