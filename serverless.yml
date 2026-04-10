@@ -27,7 +27,8 @@ provider:
             - "dynamodb:Query*"
             - "dynamodb:UpdateItem"
             - "dynamodb:DeleteItem"
-          Resource: arn:aws:dynamodb:${aws:region}:${aws:accountId}:table/${self:service}-todoList-${sls:stage}
+          Resource:
+            - !GetAtt TodoListTable.Arn
 
 plugins:
   - serverless-finch
